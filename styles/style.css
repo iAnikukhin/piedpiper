@@ -8,6 +8,21 @@ body {
   padding-left: 55px;
   padding-right: 55px;
 }
+/* menu-button */
+#menu-button {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 2;
+  margin-top: 46%;
+  margin-left: 95%;
+}
+.menu-button-box {
+  display: flex;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+}
 /* header */
 header {
   display: flex;
