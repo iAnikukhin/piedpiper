@@ -1,4 +1,5 @@
-﻿/* first test */
+﻿/* JavaScript tests */
+/* first test */
 var arr = document.getElementsByClassName("tests-title");
 arr[0].style.color = "#007765";
 arr[1].innerHTML = "Первый тест, выбрал элемент по class и изменил его";
@@ -51,3 +52,54 @@ p4.className = "js";
 var node4 = document.createTextNode("Создал четвертый элемент p и заменил им третий p")
 p4.appendChild(node4);
 arr[6].replaceChild(p4, p3);
+/* jQuery tests */
+/* first */
+$(function(){
+    $("#jq-title").html("Нет, здесь я буду тестировать jQuery!");
+});
+ /* second */
+$(function(){
+    $("#jq-a").attr("href", "https://jquery.com/");
+});
+/* third */
+$(function(){
+    $("#jq-title").append(" Добавил этот текст в конец выбранного элемента спомощью метода append");
+});
+$(function(){
+    $("#jq-title").prepend("Начали! ");
+});
+/* fourth */
+$(function(){
+    $("#jq-title").before("Метод before позволяющий добавлять контент до выбранного элемента");
+});
+$(function(){
+    $("#jq-title").after("А это метод after, он добавляет контент после выбранного элемента<br/>");
+});
+/* add element */
+$(function(){
+    let el = $("<p></p>").text("Создал новый элемент p, написал текст и вложил его в переменную el");
+    $(el).addClass("jq-p");
+    $("#jq-a").after(el);
+});
+/* css */
+$(function(){
+    $("#jquery-tests").css({"display":"flex", "justify-content":"center"});
+});
+$(function(){
+    $("#jq-title").css({"color":"#007765"});
+});
+/* remove element */
+$(function(){
+    $(".jq-p").remove();
+});
+/* menu button */
+$("#menu-button").click(function(){
+    $("header").slideToggle();
+});
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 325) {
+      $("header").slideUp();
+    } else {
+      $("header").slideDown();
+    }
+});
