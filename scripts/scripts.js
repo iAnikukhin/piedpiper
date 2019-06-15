@@ -1,10 +1,10 @@
-﻿$("#menu-button").click(function() {
-  $("header").slideToggle();
-});
-$(window).scroll(function() {
-  if ($(this).scrollTop() > 325) {
-    $("header").slideUp();
+﻿$(window).scroll(function() {
+  let i = $(".ppc-text-1").offset().top;
+  if ($(this).scrollTop() > i) {
+    $("header.top").css("visibility", "hidden");
+    $("header.bottom").css("visibility", "visible");
   } else {
-    $("header").slideDown();
+    $("header.top").css("visibility", "visible");
+    $("header.bottom").css("visibility", "hidden");
   }
 });
